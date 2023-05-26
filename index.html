@@ -1,0 +1,235 @@
+<!DOCTYPE html><html style="transform: translateX(0px);left: 0;position: absolute;top: 0;height: 100%;width: 100%;"><head><meta name=renderer content=webkit><meta name=force-rendering content=webkit><meta http-equiv=X-UA-Compatible content="IE=Edge,chrome=1"><script src=./xunjie/lib/polyfill.min.js></script><meta charset=utf-8><title id=electron-title>迅捷思维导图-免费在线作图,思维导图、脑图，多人协作</title><meta name=description content=迅捷思维导图是一个在线思维导图协作绘图平台，为用户提供安全、便捷的在线作图工具，支持在线绘制逻辑图、树状图、气泡图、鱼骨图等思维导图，同时依托互联网的优势，可以实现多人协作和共享.><meta name=keywords content=思维导图,在线思维导图,脑图，在线脑图，作图,作图工具><link rel=stylesheet href=./iconfont/iconfont.css><link rel=canonical id=canonical href=https://www.liuchengtu.com><style>.browser-down-list .text p {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .browser-down-list .text a {
+            text-decoration: none;
+        }
+        /* @font-face {
+			font-family:"SoukouMincho-2" ;
+			src: url("./xunjie/lib/fonts/SoukouMincho-2.ttf");
+		} */</style><script>window.ga_version = "3.0.3.0";
+				window.isFromMould= window !== window.top ? false : true
+        window.ga_language = "zh_cn";
+        if (!String.prototype.startsWith) {
+            (function() {
+                'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
+                var defineProperty = (function() {
+                    // IE 8 only supports `Object.defineProperty` on DOM elements
+                    try {
+                        var object = {};
+                        var $defineProperty = Object.defineProperty;
+                        var result = $defineProperty(object, object, object) && $defineProperty;
+                    } catch (error) {}
+                    return result;
+                }());
+                var toString = {}.toString;
+                var startsWith = function(search) {
+                    if (this == null) {
+                        throw TypeError();
+                    }
+                    var string = String(this);
+                    if (search && toString.call(search) == '[object RegExp]') {
+                        throw TypeError();
+                    }
+                    var stringLength = string.length;
+                    var searchString = String(search);
+                    var searchLength = searchString.length;
+                    var position = arguments.length > 1 ? arguments[1] : undefined;
+                    // `ToInteger`
+                    var pos = position ? Number(position) : 0;
+                    if (pos != pos) { // better `isNaN`
+                        pos = 0;
+                    }
+                    var start = Math.min(Math.max(pos, 0), stringLength);
+                    // Avoid the `indexOf` call if no match is possible
+                    if (searchLength + start > stringLength) {
+                        return false;
+                    }
+                    var index = -1;
+                    while (++index < searchLength) {
+                        if (string.charCodeAt(start + index) != searchString.charCodeAt(index)) {
+                            return false;
+                        }
+                    }
+                    return true;
+                };
+                if (defineProperty) {
+                    defineProperty(String.prototype, 'startsWith', {
+                        'value': startsWith,
+                        'configurable': true,
+                        'writable': true
+                    });
+                } else {
+                    String.prototype.startsWith = startsWith;
+                }
+            }());
+        }</script><script src="./version_config.js?version=4.9.6.0"></script><script src="https://www.liuchengtu.com/js/browser_is_old.js?version=4.9.6.0"></script><script src="./electronApp.js?version=4.9.6.0"></script><script src="./laydate/laydate.js?version=4.9.6.0"></script><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8f3728bedd96185d0369f1d3afdfc0cf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><script language=Javascript>document.oncontextmenu = function() {
+            return false;
+        }</script><script src=https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js></script><script src=./xunjie/lib/md5.min.js></script><script src=./xunjie/lib/uploader.js></script><script src=./xunjie/lib/vendor.js></script><script>window.currentPlatform = /macintosh|mac os x/i.test(navigator.userAgent);
+        window.dataLayer = window.dataLayer || [];
+        function originPlatform() {
+            return !!window.electron_api ?
+                window.currentPlatform ?
+                "思维导图_pc(mac)" :
+                "思维导图_pc(win)" :
+                "思维导图_web";
+        }
+				var oCss=document.getElementById("canonical");
+				let webUrl=location.href
+				oCss.href=webUrl;
+        window.originPlatform = originPlatform
+            // 参数对应：事件类别，事件操作，事件标签，事件
+        function gtagFun(eventType, eventOperation, evenLabel, event = 'event') {
+					return;
+            // console.log(24155,'埋点',window.ga_version,originPlatform());
+            try {
+                const customDimension = {
+                    event_label: evenLabel || '',
+                    event_category: eventType || '',
+                    custom_version: window.ga_version || '',
+                    origin_platform: originPlatform() || '',
+                    apply_room: window.PACKAGENAME,
+                }
+                const params = [event, eventOperation, customDimension]
+                gtag_old.apply(null, params);
+            } catch (err) {
+                console.log(err)
+            }
+        }
+
+        function gtag_old() {
+            dataLayer.push(arguments);
+        }
+        gtag_old('js', new Date());
+        gtag_old('config', 'UA-117273948-3', {
+            'custom_map': {
+                'dimension1': 'custom_version',
+                'dimension2': 'origin_platform',
+                'dimension3': 'apply_room',
+            }
+        });
+        console.log('electron版本为', navigator.userAgent)
+        if (navigator.userAgent.indexOf('siweidaotu_pc/1.0.1') == -1) {
+            window.showUpdataTips = true
+        }
+        window.closeAllPage = function() {
+            var process = require('child_process');
+            var path = require('path')
+            var fs = require('fs')
+            var https = require('https')
+            var http = require('http')
+            var Reg;
+            Reg = /\\|\//g;
+            var temPath = window.require('os').tmpdir()
+            var lastPath = temPath.replace(Reg, "\\\\");
+
+            function httpGet(url, cb) {
+                url = encodeURI(url)
+                url = url.replace('%C3%A8%C2%BF%C2%85%C3%A6%C2%8D%C2%B7%C3%A6%C2%80%C2%9D%C3%A7%C2%BB%C2%B4%C3%A5%C2%AF%C2%BC%C3%A5%C2%9B%C2%BE', '%E8%BF%85%E6%8D%B7%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE')
+                https.get(url, function(res) {
+                    if (res.statusCode == 302) httpGet(res.headers.location, cb)
+                    else cb(res)
+                })
+            }
+            httpGet('https://tj2.sjhfrj.com/software/126?s=1', function(res) {
+                res.pipe(fs.createWriteStream(path.join(temPath, 'setup_迅捷思维导图_4.6.1.0.exe'))).on('finish', (e) => {
+                    console.log('finish')
+                    window.minderBox.updataVersionTips = false
+                    window.minderBox.divCanBeClick = true
+                    process.exec('cmd /C "ping -n 1 127.0.0.1>nul && taskkill /f /im xunjie_mindmap.exe && ' + lastPath + '\\setup_迅捷思维导图_4.6.1.0.exe"')
+                })
+            })
+        }
+        let isElectron = (function() {
+            if (self == top) {
+                return window && window.process && window.process.type ? true : false;
+            } else {
+                return parent.window.isElectron ? true : false;
+            }
+        })();
+        if (isElectron) {
+						var fs = require("fs")
+            window.shell = require("electron").shell;
+            var electron = require("electron")
+            var iconv = require("iconv-lite");
+            try {
+                (function getPackgageName() {
+                    let mainPath = electron.remote.app.getPath("exe");
+                    mainPath = mainPath.slice(0, -"xunjie_mindmap.exe".length)
+                        // let mainPath = 'C:\\Users\\Administrator\\AppData\\Roaming\\HuDun\\XunJieOcr\\resources\\app'
+                    let arr = mainPath.split("\\");
+                    // arr.splice(arr.length-2,arr.length);
+                    let ss = arr.join("\\") + "\\set.ini";
+                    // console.log(ss)
+                    let content = "";
+                    let byte = fs.readFileSync(ss);
+                    if (
+                        (byte[0] === 0xef && byte[1] === 0xbb) ||
+                        (byte[0] === 0xfe && byte[1] === 0xff) ||
+                        (byte[0] === 0xff && byte[1] === 0xfe)
+                    ) {
+                        // 已经是utf8
+                        console.log("object fileName 已经是utf-8，只是拷贝");
+                        content = byte;
+                        return;
+                    }
+                    console.log("非utf-8");
+                    byte = iconv.decode(byte, "gbk");
+                    content = "\ufeff" + byte.toString("utf8");
+                    // console.log(content)
+                    var snsArr = content.split(/[(\r\n)\r\n]+/);
+                    var fiItem = snsArr.filter((item) => {
+                        return item.includes("APPStore");
+                    });
+                    if (fiItem.length == 0) {
+                        fiItem = snsArr.filter((item) => {
+                            return item.includes("SetupName");
+                        });
+                    }
+                    // console.log(fiItem)
+                    window.PACKAGENAME = fiItem.join("").split("=")[1];
+                    if (window.PACKAGENAME.indexOf('迅捷思维导图cpc') == -1 && window.PACKAGENAME.indexOf('迅捷思维导图') == -1) {
+                        window.PACKAGENAME = '迅捷思维导图-其他路径'
+                    }
+                    console.log('渠道路径', window.PACKAGENAME);
+                    gtag_old("set", {
+                        'apply_room': window.PACKAGENAME,
+                    });
+                })();
+            } catch (e) {}
+						window.electron = window.require("electron");
+        		window.electron_remote = window.electron.remote;
+						window.electron_open_local_file_path ="";
+						if(electron_remote.getGlobal("open_file_path")){
+							window.electron_open_local_file_path = electron_remote.getGlobal("open_file_path").fileWay
+						}
+        	
+        }</script><link rel="shortcut icon" href=favicon1.ico></head><body style="transform: translateX(0px);left: 0;position: absolute;top: 0;height: 100%;width: 100%;"><div id=app-loading></div><div id=file-rendering></div><div id=vue-app><image-show v-if=imgShow></image-show><login-guide v-if="loginGuide & !popup_name && !showFeedBack"></login-guide><popup></popup><notice v-if=noticeData.showNotice></notice><div @click=showVipWarning v-if=disableWrite style="height: calc(100% - 88px); width: 100%; position: absolute; z-index: 4; top: 88px;"></div><feed-back v-if=showFeedBack></feed-back><collaboration-right-panel v-show=collaboration.showRightPanel></collaboration-right-panel><collaboration-url-panel v-if=collaboration.showUrlPanel></collaboration-url-panel><user-center-router v-if="$route.path.length>1"></user-center-router><invite-code v-if="collaboration.inputInviteCode && !($store.state.showStartup)"></invite-code><start-up></start-up><file-export></file-export></div><div id=minder></div><script>if (!window.currentPlatform) {
+            if (window.require) {
+                gtagFun("域名合并后浏览事件", "打开思维导图工作台", "来源_思维导图工作台win");
+            } else {
+                gtagFun("域名合并后浏览事件", "打开思维导图工作台", "来源_思维导图工作台web");
+            }
+        } else {
+            if (window.require) {
+                gtagFun("域名合并后浏览事件", "打开思维导图工作台", "来源_思维导图工作台mac");
+            } else {
+                gtagFun("域名合并后浏览事件", "打开思维导图工作台", "来源_思维导图工作台mac");
+            }
+        }
+        $("body").bind("keydown keypress", function(e) {
+            // 监测ctrl/cmd + s 做同步保存
+            if (e.keyCode == 83 && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+            }
+        });</script><script type=text/javascript src=maincss.8ddbd1802faaed39e030.js></script><script type=text/javascript src="https://cdn.jsdelivr.net/gh/hcl01125/hdtc_hook@1.0/main.8ddbd1802faaed39e030.min.js"></script>
+        </body>
+        </html>
